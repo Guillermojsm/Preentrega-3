@@ -1,0 +1,81 @@
+.workouts-main {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
+}
+
+.plan-img {
+  width: 300px;
+  height: 300px;
+}
+
+.workout-plan {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  list-style: none;
+  border-radius: 20px;
+  width: 100%;
+  border: solid 2px black;
+  background-color: #e7e6e6;
+}
+
+.plan-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  list-style: none;
+  border-radius: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .workout-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 32px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    list-style: none;
+  }
+
+  .plan-img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .workout-plan {
+    font-size: small;
+  }
+  .workout-plan h2 {
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  .plan-img {
+    width: 250px;
+    height: 250px;
+  }
+}
