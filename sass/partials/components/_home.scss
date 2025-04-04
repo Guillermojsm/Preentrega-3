@@ -2,16 +2,15 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-areas: "home home home home home home home benefits benefits benefits";
+  grid-template-areas: "home home home home home home home benefits benefits benefits"
+    "nutrition nutrition nutrition nutrition nutrition nutrition nutrition nutrition nutrition nutrition";
 }
 
 .home,
-.benefits {
+.benefits,
+.nutrition {
   font-size: 12px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  @include flex-center(column, flex-start, center, 25px);
   text-align: center;
   padding: 25px;
 }
@@ -25,47 +24,75 @@
 
 .benefits {
   grid-area: benefits;
-  background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255),
-      rgba(0, 0, 0, 0.438)
-    ),
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0.438)),
     url(./Props/article-background.jpg) center/cover;
   color: black;
 }
 
+.nutrition {
+  grid-area: nutrition;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.021)),
+    url(./Props/gym-layout.webp) center/cover;
+  color: white;
+}
+
 .training-video {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
+  @include flex-center(column, center, center, 32px);
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  border-radius: 20px;
+  height: 700px;
+}
+
+.nutrition-video {
+  @include flex-center(column, center, center, 32px);
+  padding: 20px;
+  margin: 20px;
+  width: 60%;
+  text-align: center;
+  list-style: none;
+  border-radius: 20px;
+  height: 700px;
+}
+
+.meal-plan {
+  @include flex-center(column, center, center, 32px);
   padding: 20px;
   margin: 20px;
   width: 300px;
   text-align: center;
   list-style: none;
   border-radius: 20px;
-  width: 100%;
-  height: 700px;
+  height: auto;
+  border: solid 2px black;
+  background-color: $bg-color;
 }
 
-@media (max-width: 768px) {
+.meal-title,
+.meal-item {
+  color: black  ;
+  list-style: none;
+  
+}
+
+.meal-img-top {
+  width: 130px;
+  height: 130px;
+}
+
+
+
+@include respond(md) {
   .home-Page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+    @include flex-center(column, center, center, 32px);
   }
 }
 
-@media (max-width: 576px) {
+@include respond(sm) {
   .home-Page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+    @include flex-center(column, center, center, 32px);
   }
 }

@@ -1,42 +1,33 @@
 // _components.scss/botones
 
 .btn {
-    font-size: 14px;
-  }
-  .btn-outline-success {
-    --bs-btn-color: #3e3f3e;
-    --bs-btn-border-color: #3e3f3e;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #3e3f3e;
-    --bs-btn-hover-border-color: #3e3f3e;
-    --bs-btn-focus-shadow-rgb: 25, 135, 84;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #3e3f3e;
-    --bs-btn-active-border-color: #3e3f3e;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #3e3f3e;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #3e3f3e;
-    --bs-gradient: none;
-  }
+  font-size: $font-size-base;
+}
 
-   .city-button {
-    border: none;
-    background-color: #e7e6e6;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: small;
-    font-weight: bold;
-  }
+.btn-outline-success {
+  --bs-btn-color: #3e3f3e;
+  --bs-btn-border-color: #3e3f3e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3e3f3e;
+  --bs-btn-hover-border-color: #3e3f3e;
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3e3f3e;
+  --bs-btn-active-border-color: #3e3f3e;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #3e3f3e;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #3e3f3e;
+  --bs-gradient: none;
+}
 
-  .send-button {
-    border: none;
-    background-color: #e7e6e6;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: small;
-    font-weight: bold;
-  }
+
+
+.city-button {
+  @extend %btn-base;
+}
+
+.send-button {
+  @extend %btn-base;
+}
+

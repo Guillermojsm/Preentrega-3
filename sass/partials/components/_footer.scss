@@ -1,24 +1,17 @@
 footer {
   font-size: 12px;
-  background-color: #e7e6e6;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: $bg-color;
+  @include flex-center(column, center, center);
 }
 
-@media (max-width: 768px) {
+@include respond(md) {
   footer {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+    @include flex-center(column, center, center);
   }
 }
 
-@media (max-width: 576px) {
+@include respond(sm) {
   footer {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+    @include flex-center(column, center, center);
   }
 }

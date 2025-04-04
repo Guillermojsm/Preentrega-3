@@ -1,34 +1,35 @@
 // _components.scss/navbar
 
 .navbar {
-    display: flex;
-    background-color: #e7e6e6;
-    font-size: 14px;
-  }
-  nav img {
+  @include flex-center(row, flex-start, center);
+  background-color: $bg-color;
+  font-size: $font-size-base;
+}
+
+nav {
+  img {
     width: 150px;
     height: 100px;
   }
-  
-  .navbar-brand {
-    font-size: 25px;
-    font-weight: 600;
-  }
+}
 
-  @media (max-width: 768px) {
-    
-    .navbar {
-      width: 100%;
-    }
-  }
+.navbar-brand {
+  font-size: $font-size-navbar-brand;
+  font-weight: $font-weight-bold;
+}
 
-  @media (max-width: 576px) {
-    body {
-      margin: 16px;
-    }
-  
-    .logo-Img {
-      width: 0px;
-      height: 0px;
-    }
+@include respond(md) {
+  .navbar {
+    width: 100%;
   }
+}
+
+@include respond(sm) {
+  body {
+    margin: 16px;
+  }
+  .logo-Img {
+    width: 0;
+    height: 0;
+  }
+}

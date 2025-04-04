@@ -1,5 +1,7 @@
 @import 'partials/base/reset';
 @import 'partials/base/tipografia';
+@import'partials/base/variables';
+@import 'partials/base/breakpoints';
 
 @import 'partials/utilities/mixins';
 
@@ -10,7 +12,7 @@
 @import 'partials/components/contact';
 @import 'partials/components/form';
 @import 'partials/components/locations';
-@import 'partials/components/cards';
 @import 'partials/components/plans';
 @import 'partials/components/workouts';
+@import 'partials/components/cards';     
     
